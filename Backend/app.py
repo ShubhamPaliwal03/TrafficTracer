@@ -34,7 +34,7 @@ NETWORK_THRESHOLDS = {
     'enterprise': 12
 }
 
-@app.route('/', methods=['POST'])
+@app.route('/')
 def home():
     return '<h2>Welcome to TrafficTracer Backend API! 📦🔍</h2>', 200
 
