@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
     loader.style.display = 'block';
     resultDiv.style.display = 'none';
 
-    const response = await fetch('http://localhost:5000/predict', {
+    const response = await fetch('https://traffictracer.onrender.com/predict', {
         method: 'POST',
         body: formData
     });
