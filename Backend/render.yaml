@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: botnet-detector
+    env: python
+    buildCommand: cd Backend && pip install -r requirements.txt
+    startCommand: cd Backend && gunicorn app:app
+    plan: free
