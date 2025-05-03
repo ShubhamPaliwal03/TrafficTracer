@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Use CICFlowMeter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CICFlowMeter Guide</h1>
+        <u>Follow these steps:</u>
+        <ol>
+            <li>Download the <strong>CICFlowMeter.zip</strong> file from the provided link.</li>
+            <br>
+            <li>Extract the ZIP file to any convenient location on your PC (e.g., Desktop or Downloads).</li>
+            <br>
+            <li>Navigate to the <code>/bin</code> folder inside the extracted directory; you will see a Windows Batch File named <strong>CICFlowMeter.bat</strong>. Note down or copy the full path of this folder for easy access.</li>
+            <br>
+            <li>Open the Windows Start Menu, search for <strong>Command Prompt (cmd)</strong>, and right-click to select <strong>Run as Administrator</strong>.</li>
+            <br>
+            <li>In Command Prompt, use the <code>cd</code> command to navigate to the <code>/bin</code> folder. 
+                <br><br> For example:<br>
+                <br>
+                <code>cd "C:\Users\YourName\Desktop\CICFlowMeter\bin"</code>
+                <br><br>
+                Use <code>dir</code> to list the contents and confirm you’re in the correct directory.
+            </li>
+            <br>
+            <li>Once inside the <code>/bin</code> folder, type <strong>CICFlowMeter.bat</strong> and press <strong>Enter</strong>.</li>
+            <br>
+            <li>The CICFlowMeter application will launch. Click on the <strong>Load</strong> button to view a list of available network interfaces.</li>
+            <br>
+            <li>You will now see interfaces listed like:
+                <br><br>
+                <code>\Device\NPF_{P7946A41-2914-8ZS0-K74Y-4GI931CU516D} (Microsoft)</code> etc.
+            </li>
+            <br>
+            <li><strong>How to identify your Wi-Fi or Ethernet network interface:</strong>
+                <br>
+                <br>
+                <ul>
+                    <li>Open Command Prompt and type <code>ipconfig /all</code>, then press Enter.</li>
+                    <br>
+                    <li>Look for the adapter in use (e.g., "Wireless LAN adapter Wi-Fi" for Wi-Fi or "Ethernet adapter" for a wired connection).</li>
+                    <br>
+                    <li>Note the <strong>Description</strong> or <strong>Physical Address</strong> (MAC address) of your active network adapter.</li>
+                    <br>
+                    <li>In the CICFlowMeter interface list, match the description or MAC address with the corresponding device entry. This ensures you select the correct network interface for capturing traffic.</li>
+                </ul>
+            </li>
+            <br>
+            <li>If you already have a <code>.pcap</code> file (captured traffic), go to the Network tab (open by default), click the <strong>Offline</strong> button, browse to your input file, and select the output folder. Then click <strong>Load</strong> and export the flows as a <code>.csv</code> file by clicking <strong>OK</strong>.</li>
+            <br>
+            <li>To capture live traffic: Go to the Network tab (open by default), click the <strong>Realtime</strong> button, and click <strong>Start</strong> to begin monitoring packet flows on the selected interface.</li>
+            <br>
+            <li>When you are done capturing traffic, click <strong>Stop</strong>.</li>
+            <br>
+            <li>A pop-up notification will confirm that the <code>.csv</code> file has been saved at the specified location.</li>
+            <br>
+            <li>You can also use <strong>Wireshark</strong> to record <code>.pcap</code> files if you prefer or already have recorded traffic. Download Wireshark from: <a href="https://www.wireshark.org/download.html" target="_blank">https://www.wireshark.org/download.html</a>.</li>
+            <br>
+            <li><strong>Tip:</strong> While Wireshark is great for capturing <code>.pcap</code> files, it’s recommended to use CICFlowMeter directly for real-time traffic if you want to generate <code>.csv</code> files without additional steps.</li>
+            <br>
+            <li>Now open the <strong>TrafficTracer</strong> web application.</li>
+            <br>
+            <li>Upload the generated <code>.csv</code> file using the provided upload form.</li>
+            <br>
+            <li>Select the network type (e.g., Home/SOHO) that matches the environment of your traffic capture, and click <strong>Detect</strong>.</li>
+            <br>
+            <li>The detection results—including analysis and visualizations—will be displayed on your screen.</li>
+            <br>
+            <li>Thank you for using <strong>TrafficTracer</strong>!</li>
+            <br>
+        </ol>
+
+        <h3>Video Tutorial:</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tgUpM8VQGj0" frameborder="0" allowfullscreen></iframe>
+
+        <h3>Prerequisites:</h3>
+        <ul>
+            <li>Java 1.8: <a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html" target="_blank">Download Java 1.8</a></li>
+            <li>Install Java and ensure it’s in your PATH (check by running <code>java -version</code> in terminal).</li>
+        </ul>
+
+        <a href="./index.html" class="btn">Back to Detection</a>
+
+        <br><br>
+        <hr>
+
+        <h3>Attribution & License:</h3>
+        <p>
+            The <strong>CICFlowMeter</strong> tool is developed and maintained by its original authors. Full credit to:
+        </p>
+        <ul>
+            <li>Arash Habibi Lashkari: Researcher and Developer (Founder)</li>
+            <li>Gerard Draper: Researcher and Developer (Co-founder)</li>
+            <li>Muhammad Saiful Islam: Researcher and Developer (Co-founder)</li>
+        </ul>
+        <p>
+            License:<br><br>
+            <em>
+            &copy; 2016. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (CICFlowMeter), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br><br>
+            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.<br><br>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+            </em>
+        </p>
+        <p>
+            For proper citation and a full understanding of CICFlowMeter (formerly ISCXFlowMeter), refer to these published papers:
+        </p>
+        <ul>
+            <li>Arash Habibi Lashkari, Gerard Draper-Gil, Mohammad Saiful Islam Mamun, Ali A. Ghorbani, <em>"Characterization of Tor Traffic Using Time Based Features"</em>, 3rd International Conference on Information System Security and Privacy, SCITEPRESS, Porto, Portugal, 2017.</li>
+            <li>Gerard Draper Gil, Arash Habibi Lashkari, Mohammad Mamun, Ali A. Ghorbani, <em>"Characterization of Encrypted and VPN Traffic Using Time-Related Features"</em>, Proceedings of the 2nd International Conference on Information Systems Security and Privacy (ICISSP 2016), pages 407-414, Rome, Italy.</li>
+        </ul>
+        <p>
+            Official links:<br><br>
+            <a href="https://github.com/ahlashkari/CICFlowMeter" target="_blank">https://github.com/ahlashkari/CICFlowMeter</a><br>
+            <a href="https://www.unb.ca/cic/research/applications.html" target="_blank">https://www.unb.ca/cic/research/applications.html</a>
+        </p>
+    </div>
+</body>
+</html>
