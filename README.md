@@ -10,7 +10,7 @@ To assist users in generating flow-based CSV files, a downloadable `.jar` file o
 ### Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, Chart.js
-- **Backend:** FastAPI (Python), XGBoost model
+- **Backend:** FlaskAPI (Python), XGBoost model
 - **Deployment:** Vercel (Frontend), Render.com (Backend API)
 
 ---
